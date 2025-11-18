@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Learning World</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Welcome Page -->
+    <div id="welcomePage" class="page active">
+        <div class="container">
+            <div class="card">
+                <h1 class="title bounce">🌟🌈 WELCOME TO HAPPY LEARNING WORLD! 🌈🌟</h1>
+                <p class="subtitle">
+                    Hello, Little learners. <br>
+                    Get ready to explore, discover, and have fun as you learn new things every day! <br>
+                    Your journey begins right here, right now! 🚀💖
+                </p>
+                
+                <div class="portal-section">
+                    <h2 class="portal-title">✨ Choose Your Magical Learning Portal ✨</h2>
+                    <p class="portal-text">
+                        Each portal takes you to a fun new world filled with games, surprises, and learning!
+                    </p>
+                    
+                    <div class="name-input-section">
+                        <label class="name-label">Hello, I'm</label>
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Type your name here"
+                            class="name-input"
+                        />
+                    </div>
+                    
+                    <button id="startButton" class="start-button hidden">
+                        🚀 Start Learning Adventure! 🚀
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Activities Page -->
+    <div id="activitiesPage" class="page">
+        <div class="container">
+            <div class="card">
+                <div class="header">
+                    <h2 class="greeting">Hello, <span id="studentGreeting"></span>! 👋</h2>
+                    <div class="activity-counter">
+                        Activity <span id="currentActivityNum">1</span> of 5
+                    </div>
+                </div>
+
+                <!-- Activity 1: Word Matching -->
+                <div id="activity1" class="activity active-activity">
+                    <h3 class="activity-title">📝 Word and Picture Matching 📝</h3>
+                    <p class="activity-instructions">Click on the picture that matches each word!</p>
+                    <div id="wordMatchingContainer"></div>
+                </div>
+
+                <!-- Activity 2: Color Matching -->
+                <div id="activity2" class="activity">
+                    <h3 class="activity-title">🌈 Color Matching 🌈</h3>
+                    <p class="activity-instructions">Click the correct color name for each flower!</p>
+                    <div id="colorMatchingContainer"></div>
+                </div>
+
+                <!-- Activity 3: Counting -->
+                <div id="activity3" class="activity">
+                    <h3 class="activity-title">🔢 Counting Fun 🔢</h3>
+                    <p class="activity-instructions">Count the items and type the number!</p>
+                    <div id="countingContainer"></div>
+                </div>
+
+                <!-- Activity 4: Color the Pictures -->
+                <div id="activity4" class="activity">
+                    <h3 class="activity-title">🎨 Color the Pictures 🎨</h3>
+                    <p class="activity-instructions">Choose a color and click on the pictures that should be that color!</p>
+                    <div id="coloringContainer"></div>
+                </div>
+
+                <!-- Activity 5: Color the Red Objects -->
+                <div id="activity5" class="activity">
+                    <h3 class="activity-title">🍎 Color the Red Objects 🍓</h3>
+                    <p class="activity-instructions">Choose a color and click on the objects that should be red!</p>                    
+                    <div id="redWorksheetContainer"></div>
+                </div>
+
+                <div class="next-button-container">
+                    <button id="nextButton" class="next-button">➡️ Next Activity</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Page -->
+    <div id="resultsPage" class="page">
+        <div class="container">
+            <div class="card">
+                <h1 class="results-title">🎉 Amazing Work, <span id="studentResultName"></span>! 🎉</h1>
+                
+                <div class="score-section">
+                    <p class="score-label">Your Score:</p>
+                    <p class="score-value">
+                        <span id="finalScore">0</span> / <span id="totalQuestions">0</span>
+                    </p>
+                </div>
+                
+                <div class="encouragement" id="encouragementMessage"></div>
+                
+                <button id="playAgainButton" class="play-again-button">
+                    🔄 Play Again!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
