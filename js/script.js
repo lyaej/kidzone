@@ -8,20 +8,20 @@ let selectedColorHex = null;    // color hex for hue mapping
 // ==================== Activity Data ====================
 // (generic placeholder PNG paths; replace with your actual files)
 const wordMatchingData = [
-    { word: 'cat', correctIndex: 2, images: ['../assets/icon/sun.png', '../assets/icon/moon.png', '../assets/icon/cat.png'] },
-    { word: 'den', correctIndex: 1, images: ['../assets/icon/book.png', '../assets/icon/den.png', '../assets/icon/duck.png'] },
-    { word: 'pin', correctIndex: 0, images: ['../assets/icon/pin.png', '../assets/icon/ant.png', '../assets/icon/bed.png'] },
-    { word: 'box', correctIndex: 0, images: ['../assets/icon/box.png', '../assets/icon/rabbit.png', '../assets/icon/window.png'] },
-    { word: 'run', correctIndex: 1, images: ['../assets/icon/bike.png', '../assets/icon/run.png', '../assets/icon/car.png'] },
-    { word: 'dot', correctIndex: 2, images: ['../assets/icon/treasure-chest.png', '../assets/icon/color-wheel.png', '../assets/icon/dot.png'] }
+    { word: 'cat', correctIndex: 2, images: ['./assets/icon/sun.png', './assets/icon/moon.png', './assets/icon/cat.png'] },
+    { word: 'den', correctIndex: 1, images: ['./assets/icon/book.png', './assets/icon/den.png', './assets/icon/duck.png'] },
+    { word: 'pin', correctIndex: 0, images: ['./assets/icon/pin.png', './assets/icon/ant.png', './assets/icon/bed.png'] },
+    { word: 'box', correctIndex: 0, images: ['./assets/icon/box.png', './assets/icon/rabbit.png', './assets/icon/window.png'] },
+    { word: 'run', correctIndex: 1, images: ['./assets/icon/bike.png', './assets/icon/run.png', './assets/icon/car.png'] },
+    { word: 'dot', correctIndex: 2, images: ['./assets/icon/treasure-chest.png', './assets/icon/color-wheel.png', './assets/icon/dot.png'] }
 ];
 
 const colorMatchingData = [
-    { color: 'blue', flower: '../assets/color/blue.png', options: [{name: 'blue', image: '../assets/color/blue.png'}, {name: 'black', image: '../assets/color/black.png'}] },
-    { color: 'red', flower: '../assets/color/red.png', options: [{name: 'white', image: '../assets/color/white.png'}, {name: 'red', image: '../assets/color/red.png'}] },
-    { color: 'yellow', flower: '../assets/color/yellow.png', options: [{name: 'yellow', image: '../assets/color/yellow.png'}, {name: 'purple', image: '../assets/color/purple.png'}] },
-    { color: 'purple', flower: '../assets/color/purple.png', options: [{name: 'brown', image: '../assets/color/brown.png'}, {name: 'purple', image: '../assets/color/purple.png'}] },
-    { color: 'pink', flower: '../assets/color/pink.png', options: [{name: 'blue', image: '../assets/color/blue.png'}, {name: 'pink', image: '../assets/color/pink.png'}] }
+    { color: 'blue', flower: './assets/color/blue.png', options: [{name: 'blue', image: './assets/color/blue.png'}, {name: 'black', image: './assets/color/black.png'}] },
+    { color: 'red', flower: './assets/color/red.png', options: [{name: 'white', image: './assets/color/white.png'}, {name: 'red', image: './assets/color/red.png'}] },
+    { color: 'yellow', flower: './assets/color/yellow.png', options: [{name: 'yellow', image: './assets/color/yellow.png'}, {name: 'purple', image: './assets/color/purple.png'}] },
+    { color: 'purple', flower: './assets/color/purple.png', options: [{name: 'brown', image: './assets/color/brown.png'}, {name: 'purple', image: './assets/color/purple.png'}] },
+    { color: 'pink', flower: './assets/color/pink.png', options: [{name: 'blue', image: './assets/color/blue.png'}, {name: 'pink', image: './assets/color/pink.png'}] }
 ];
 
 const countingData = [
@@ -63,19 +63,19 @@ const availableColors = [
 
 const coloringData = crayonColoringData.map(item => ({
     name: item.name,
-    image: `../assets/coloring/${item.name}.png`,
+    image: `./assets/coloring/${item.name}.png`,
     correctColor: item.correctColor
 }));
 
 const redWorksheetData = [
-    { name: "apple", correct: true, svg: "../assets/act5/apple.svg" },
-    { name: "cow", correct: false, svg: "../assets/act5/cow.svg" },
-    { name: "crab", correct: true, svg: "../assets/act5/crab.svg" },
-    { name: "goose", correct: false, svg: "../assets/act5/goose.svg" },
-    { name: "cherries", correct: true, svg: "../assets/act5/cherry.svg" },
-    { name: "goat", correct: false, svg: "../assets/act5/goat.svg" },
-    { name: "strawberry", correct: true, svg: "../assets/act5/strawberry.svg" },
-    { name: "heart", correct: true, svg: "../assets/act5/heart.svg" }
+    { name: "apple", correct: true, svg: "./assets/act5/apple.svg" },
+    { name: "cow", correct: false, svg: "./assets/act5/cow.svg" },
+    { name: "crab", correct: true, svg: "./assets/act5/crab.svg" },
+    { name: "goose", correct: false, svg: "./assets/act5/goose.svg" },
+    { name: "cherries", correct: true, svg: "./assets/act5/cherry.svg" },
+    { name: "goat", correct: false, svg: "./assets/act5/goat.svg" },
+    { name: "strawberry", correct: true, svg: "./assets/act5/strawberry.svg" },
+    { name: "heart", correct: true, svg: "./assets/act5/heart.svg" }
 ];
 
 
@@ -286,7 +286,7 @@ function renderCounting() {
 
         for (let i = 0; i < item.count; i++) {
             const img = document.createElement('img');
-            img.src = `../assets/count/${item.items}.png`;
+            img.src = `./assets/count/${item.items}.png`;
             img.alt = item.items;
             img.className = 'counting-item-image';
             itemsDiv.appendChild(img);
